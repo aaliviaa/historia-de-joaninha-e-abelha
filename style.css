@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+    --cor-fundo: #FFF8E7;       /* Amarelo muito suave/creme */
+    --cor-principal: #FFD54F;   /* Amarelo vibrante */
+    --cor-secundaria: #E53935;  /* Vermelho joaninha */
+    --cor-destaque: #D32F2F;    /* Vermelho escuro */
+    --cor-texto: #212121;       /* Texto escuro para contraste */
+    --cor-botao-texto: #FFFFFF;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    transform: scale(1.02);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
